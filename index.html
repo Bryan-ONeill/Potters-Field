@@ -3,38 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Potters Field</title>
+    <title>Potters Field</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+            font-family: "Georgia", serif;
+            line-height: 1.8;
             background-color: #f4f4f4;
             margin: 0;
             padding: 0;
+            color: #333;
         }
         header {
-            background: #333;
+            background: linear-gradient(to right, #6b0f1a, #b91372);
             color: #fff;
-            padding: 1rem 0;
+            padding: 20px 0;
             text-align: center;
+            border-bottom: 5px solid #6b0f1a;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        header p {
+            font-style: italic;
+            margin: 0;
         }
         .container {
             padding: 20px;
             max-width: 800px;
             margin: 20px auto;
             background: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            border: 5px solid #6b0f1a;
         }
-        h1, h2 {
-            color: #333;
+        h2 {
+            color: #6b0f1a;
+            border-bottom: 2px solid #b91372;
+            padding-bottom: 5px;
+        }
+        img.heraldry {
+            display: block;
+            margin: 0 auto 20px auto;
+            max-width: 100px;
         }
         footer {
             text-align: center;
-            padding: 10px 0;
+            padding: 15px 0;
             margin-top: 20px;
-            background: #333;
+            background: #6b0f1a;
             color: #fff;
+        }
+        form {
+            margin-top: 20px;
+        }
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        form button {
+            background: #6b0f1a;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        form button:hover {
+            background: #b91372;
         }
     </style>
 </head>
@@ -44,40 +89,30 @@
         <p>“Sanctuary of Transformation”</p>
     </header>
     <div class="container">
+        <img src="placeholder-heraldry.png" alt="Heraldic Design" class="heraldry">
         <h2>Welcome</h2>
         <p>Potters Field is a peaceful retreat built with care, designed as a sanctuary for reflection and transformation. This space embodies creativity, sacrifice, and resilience, offering a refuge for those in need of peace and connection to nature.</p>
         
         <h2>About</h2>
         <p>This sanctuary was built entirely by hand, with dedication, resourcefulness, and the skills I honed over decades of service. Every detail you see here reflects years of planning, effort, and an unyielding will to create something meaningful.</p>
-        <p>As a former soldier and chef who has served in the British Army and the Territorial Army, I understand the value of discipline, ingenuity, and respect. This space is a testament to those qualities—and a reminder to treat it with care.</p>
-
-        <h2>Guidelines</h2>
-        <p>We kindly ask all visitors to respect the following:  
-            <ul>
-                <li>This is a private sanctuary; please tread carefully and respectfully.</li>
-                <li>Vandalism or disrespectful behavior will not be tolerated.</li>
-                <li>This area is under video surveillance for security purposes.</li>
-                <li>If you choose to disrespect this space, remember: everything you see here was built by me alone. That same resourcefulness ensures I will find those who harm it.</li>
-            </ul>
-        </p>
+        <p>As a former soldier who has served in the British Army and the Territorial Army, I understand the value of discipline, ingenuity, and respect. This space is a testament to those qualities—and a reminder to treat it with care.</p>
 
         <h2>Contact</h2>
-        <p>If you have any questions or would like to learn more, please reach out via the contact form below.</p>
-        <p><a href="mailto:your-email@example.com">Email Us</a></p>
+        <form action="https://formspree.io/f/mvgodbpv" method="POST">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
     </div>
     <footer>
         <p>&copy; 2024 Potters Field. All rights reserved.</p>
     </footer>
-    <form action="https://formspree.io/f/mvgodbpv" method="POST">
-    <label for="name">Your Name:</label>
-    <input type="text" id="name" name="name" required>
-
-    <label for="email">Your Email:</label>
-    <input type="email" id="email" name="email" required>
-
-    <label for="message">Your Message:</label>
-    <textarea id="message" name="message" rows="5" required></textarea>
-
-    <button type="submit">Send Message</button>
-</form>
+</body>
 </html>
